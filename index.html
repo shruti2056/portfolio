@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shruti Chakraborty | B.Tech CSE</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-r"></div>
+<div id="prog"></div>
+<canvas id="bgCanvas"></canvas>
+
+<nav id="nav">
+  <a href="#home" class="logo"><span>// </span>shruti.dev</a>
+  <ul class="nl">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#achievements">Wins</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="theme-btn" id="themeBtn" title="Toggle light/dark mode">
+    <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="container">
+    <div class="hero-in">
+      <div>
+        <div class="hchip"><div class="hdot"></div><span>Open to Internships &amp; Opportunities</span></div>
+        <h1 class="hname">SHRUTI<br><span class="r2">CHAKRABORTY</span></h1>
+        <p class="hsub">B.TECH CSE &nbsp;·&nbsp; CLOUD COMPUTING &nbsp;·&nbsp; LPU PUNJAB</p>
+        <p class="hdesc">Building interactive web experiences, solving algorithmic problems, and exploring cloud infrastructure. GCP Diamond League achiever &amp; passionate full-stack explorer.</p>
+        <div class="hctas">
+          <a href="#resume" class="btn btn-c">View Resume →</a>
+          <a href="#contact" class="btn btn-g">Get In Touch</a>
+        </div>
+      </div>
+
+      <!-- PHOTO CARD -->
+      <div class="photo-card">
+        <div class="photo-frame" id="photoFrame">
+          <!--
+            HOW TO ADD YOUR PHOTO FOR GITHUB:
+            1. Put your photo file in the same folder as this HTML (e.g. photo.jpg)
+            2. Change src="" below to src="photo.jpg"
+            3. Remove style="display:none;" from the img tag
+          -->
+          <img id="photoImg" src="p.jpeg" alt="Shruti Chakraborty" "/>
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="16" r="8" stroke="#c084fc" stroke-width="1.5"/><path d="M4 40c0-9.941 8.059-18 18-18s18 8.059 18 18" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <p>Add <code style="font-size:.55rem;color:var(--cyan);">src="photo.jpg"</code><br/>to the img tag above</p>
+          </div>
+          <div class="fc tl"></div><div class="fc tr"></div>
+          <div class="fc bl"></div><div class="fc br"></div>
+        </div>
+        <label class="photo-upload-btn" for="photoInput" title="Preview only — add src= to img tag for GitHub">
+          ⊕ &nbsp;Shruti Chakraborty
+        </label>
+        <input type="file" id="photoInput" class="photo-upload-input" accept="image/*"/>
+        <div class="photo-info">
+          <span class="photo-info-name" id="photoName">set src= for deploy</span>
+          <span class="photo-info-badge" id="photoBadge" style="color:var(--muted);">LOCAL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="twrap">
+  <div class="tick">
+    <span class="ti"><b>◆</b>C++ / Python / JS</span><span class="ti"><b>◆</b>Cloud Computing</span>
+    <span class="ti"><b>◆</b>Data Structures</span><span class="ti"><b>◆</b>GCP Diamond League</span>
+    <span class="ti"><b>◆</b>React / Tailwind</span><span class="ti"><b>◆</b>CGPA 7.64</span>
+    <span class="ti"><b>◆</b>LPU Punjab</span><span class="ti"><b>◆</b>Web Development</span>
+    <span class="ti"><b>◆</b>C++ / Python / JS</span><span class="ti"><b>◆</b>Cloud Computing</span>
+    <span class="ti"><b>◆</b>Data Structures</span><span class="ti"><b>◆</b>GCP Diamond League</span>
+    <span class="ti"><b>◆</b>React / Tailwind</span><span class="ti"><b>◆</b>CGPA 7.64</span>
+    <span class="ti"><b>◆</b>LPU Punjab</span><span class="ti"><b>◆</b>Web Development</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="lbl rev">About Me</p>
+    <div class="ag">
+      <div class="rev d1">
+        <h2 class="st">Code. <em>Cloud.</em><br>Create.</h2>
+        <p class="ap">I'm a <strong>Computer Science Engineering student</strong> at Lovely Professional University, Punjab, specializing in <strong>Cloud Computing</strong> with a current CGPA of 7.64.</p>
+        <p class="ap">My journey spans frontend development, algorithmic problem-solving, and cloud platforms. I've competed in <strong>Google Cloud Skill Boost</strong> challenges and reached Diamond League — completing 30+ hands-on labs across core GCP services.</p>
+        <p class="ap">I thrive on turning complex CS concepts into real, working products — whether that's a Minesweeper engine backed by data structures or a constraint-based scheduling system built entirely in vanilla JS.</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.8rem;">
+          <a href="mailto:shruti.asn@rediffmail.com" class="about-icon-btn" title="Email Me">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/shruti923" target="_blank" class="about-icon-btn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/shruti2056" target="_blank" class="about-icon-btn" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="rev d2">
+        <p class="lbl" style="margin-bottom:1.2rem;">Education</p>
+        <div>
+          <div class="ei"><span class="eyr">2023 →</span>
+            <div><p class="eh">B.Tech – Computer Science Engineering</p>
+            <p class="es">Lovely Professional University, Punjab<br>Specialization: Cloud Computing</p>
+            <span class="badge">CGPA: 7.64</span></div>
+          </div>
+          <div class="ei"><span class="eyr">2022–23</span>
+            <div><p class="eh">Intermediate (Class XII)</p>
+            <p class="es">India International School, Asansol, West Bengal</p>
+            <span class="badge">80.4%</span></div>
+          </div>
+          <div class="ei"><span class="eyr">2021</span>
+            <div><p class="eh">Matriculation (Class X)</p>
+            <p class="es">Assembly of God Church School, Asansol, West Bengal</p>
+            <span class="badge">91%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="lbl rev">Technical Arsenal</p>
+    <h2 class="st rev d1">My <em>Stack.</em></h2>
+    <div class="skg rev d2">
+      <div class="skc"><h3>Languages</h3><div class="tags"><span class="tag">C++</span><span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">React</span></div></div>
+      <div class="skc"><h3>Frontend</h3><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Tailwind CSS</span><span class="tag">Responsive Design</span><span class="tag">LocalStorage API</span></div></div>
+      <div class="skc"><h3>Tools &amp; Platforms</h3><div class="tags"><span class="tag">GCP</span><span class="tag">VS Code</span><span class="tag">GitHub</span><span class="tag">DBMS</span></div></div>
+      <div class="skc"><h3>Core CS</h3><div class="tags"><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Big-O</span><span class="tag">OOP</span><span class="tag">Scheduling</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="lbl rev">Selected Work</p>
+    <h2 class="st rev d1">Things I've <em>Built.</em></h2>
+    <div class="proj-cards">
+
+      <div class="pcard rev d1">
+        <div class="pcard-top">
+          <div><p class="pcard-num">01</p><p class="pcard-date">Jun 2025 – Jul 2025</p></div>
+          <a href="https://github.com/shruti2056/summer_training" target="_blank" class="pcard-gh">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub ↗
+          </a>
+        </div>
+        <h3 class="pcard-title">Minesweeper Game</h3>
+        <p class="pcard-desc">A fully functional Minesweeper built as a practical DSA case study. Implemented 2D arrays for fast cell access, sets for flagged-cell tracking, and Python Tkinter for the GUI.</p>
+        <div class="ptags"><span class="ptag">Python</span><span class="ptag">Tkinter</span><span class="ptag">DSA</span><span class="ptag">2D Arrays</span></div>
+      </div>
+
+      <div class="pcard rev d2">
+        <div class="pcard-top">
+          <div><p class="pcard-num">02</p><p class="pcard-date">Jul 2025</p></div>
+          <a href="https://github.com/shruti2056/smart-timetable" target="_blank" class="pcard-gh">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub ↗
+          </a>
+        </div>
+        <h3 class="pcard-title">Smart Timetable Scheduler</h3>
+        <p class="pcard-desc">Classroom &amp; timetable management system with admin dashboard. Constraint-based scheduling ensures conflict-free timetables; CSV export enables offline sharing.</p>
+        <div class="ptags"><span class="ptag">HTML/CSS</span><span class="ptag">JavaScript</span><span class="ptag">Local Storage</span><span class="ptag">CSV Export</span></div>
+      </div>
+
+      <div class="pcard rev d3">
+        <div class="pcard-top">
+          <div><p class="pcard-num">03</p><p class="pcard-date">February 2026</p></div>
+          <a href="https://github.com/shruti2056/ticket_management" target="_blank" class="pcard-gh">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            GitHub ↗
+          </a>
+        </div>
+        <h3 class="pcard-title">TicketBud - Team Ticket Management System</h3>
+        <p class="pcard-desc">Full-stack ticket management system with React and Node.js enabling team collaboration through hierarchical task assignment. Users create tickets, assign team names, select members, and delegate specific subtasks per person. Features authentication, status tracking, modern UI, and MongoDB cloud storage.</p>
+        <div class="ptags"><span class="ptag">React</span><span class="ptag">Tailwind CSS</span><span class="ptag">Vite</span><span class="ptag">JavaScript</span><span class="ptag">Node.js</span><span class="ptag">Express</span><span class="ptag">MongoDB Atlas (Cloud)</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section id="training">
+  <div class="container">
+    <p class="lbl rev">Experience</p>
+    <h2 class="st rev d1">Training &amp; <em>Internships.</em></h2>
+    <div class="trg">
+      <div class="trc rev d2">
+        <div class="tr-cert-bar">
+          <p class="tro">Lovely Professional University</p>
+          <a href="Summer training.pdf" target="_blank" class="tr-view-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+        </div>
+        <h3 class="trt">Data Structures &amp; Algorithms Training</h3>
+        <p class="trp">June 2025 – July 2025</p>
+        <ul class="trpts">
+          <li>Core data structures: arrays, linked lists, trees, graphs</li>
+          <li>Searching &amp; sorting with Big-O complexity analysis</li>
+          <li>Solved practical coding challenges and real-world problems</li>
+        </ul>
+      </div>
+      <div class="trc rev d3">
+        <div class="tr-cert-bar">
+          <p class="tro">SkillCraft Technology</p>
+          <a href="Certificate.pdf" target="_blank" class="tr-view-btn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+        </div>
+        <h3 class="trt">Frontend Web Development Internship</h3>
+        <p class="trp">July 2025</p>
+        <ul class="trpts">
+          <li>Built interactive web apps with task management features</li>
+          <li>Deepened skills in HTML, CSS &amp; JavaScript</li>
+          <li>Focused on improving design, functionality &amp; UX</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <p class="lbl rev">Credentials</p>
+    <h2 class="st rev d1">Licenses &amp; <em>Certificates.</em></h2>
+    <div class="cg rev d2" id="certGrid">
+
+      <div class="cc" onclick="openCertViewer('Java Programming','java.pdf')">
+        <div class="cc-preview">
+          <iframe src="java.pdf" scrolling="no" title="Certificate preview"></iframe>
+          <div class="cc-preview-overlay">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>Click to open</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <div class="cert-badge">🏅</div>
+          <p class="ciss">iamneo</p>
+          <h4 class="cn">Java Programming</h4>
+          <div class="cert-meta">
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jan 2025 – May 2025</span>
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>iamneo Platform</span>
+          </div>
+          <span class="cert-view-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View Certificate</span>
+        </div>
+      </div>
+
+      <div class="cc" onclick="openCertViewer('Intro to Hardware &amp; OS','bx10.pdf')">
+        <div class="cc-preview">
+          <iframe src="bx10.pdf" scrolling="no" title="Certificate preview"></iframe>
+          <div class="cc-preview-overlay">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>Click to open</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <div class="cert-badge">💻</div>
+          <p class="ciss">be10x</p>
+          <h4 class="cn">AI Tools Workshop</h4>
+          <div class="cert-meta">
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>8th March 2026</span>
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>be10x</span>
+          </div>
+          <span class="cert-view-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View Certificate</span>
+        </div>
+      </div>
+
+      <div class="cc" onclick="openCertViewer('Data Structures &amp; Algorithms','dsa.pdf')">
+        <div class="cc-preview">
+          <iframe src="dsa.pdf" scrolling="no" title="Certificate preview"></iframe>
+          <div class="cc-preview-overlay">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>Click to open</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <div class="cert-badge">🌲</div>
+          <p class="ciss">iamneo</p>
+          <h4 class="cn">Data Structures &amp; Algorithms</h4>
+          <div class="cert-meta">
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Aug 2024 – Dec 2024</span>
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>iamneo Platform</span>
+          </div>
+          <span class="cert-view-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View Certificate</span>
+        </div>
+      </div>
+
+      <div class="cc" onclick="openCertViewer('Certificate Name','Adobe India Hackathon.pdf')">
+        <div class="cc-preview">
+          <iframe src="Adobe India Hackathon.pdf" scrolling="no" title="Certificate preview"></iframe>
+          <div class="cc-preview-overlay">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>Click to open</span>
+          </div>
+        </div>
+        <div class="cc-body">
+          <div class="cert-badge">🏆</div>
+          <p class="ciss">Lovely Professional University</p>
+          <h4 class="cn">Adobe India Hackathon</h4>
+          <div class="cert-meta">
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sept 2024</span>
+            <span class="cert-meta-row"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Adobe / Lovely Professional University</span>
+          </div>
+          <span class="cert-view-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View Certificate</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERT VIEWER MODAL -->
+<div id="certViewModal" style="display:none;position:fixed;inset:0;z-index:9990;background:rgba(10,6,18,.96);flex-direction:column;">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.5rem;border-bottom:1px solid #2e1a52;background:#160d2a;flex-shrink:0;">
+    <span id="certViewTitle" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#c084fc;">// Certificate</span>
+    <div style="display:flex;gap:.8rem;align-items:center;">
+      <a id="certViewOpen" href="#" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;text-decoration:none;border:1px solid rgba(167,139,250,.3);padding:.32rem .75rem;display:flex;align-items:center;gap:.35rem;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Open in new tab
+      </a>
+      <button onclick="closeCertViewer()" style="font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#9575b8;background:none;border:1px solid #2e1a52;cursor:pointer;padding:.32rem .65rem;">✕ Close</button>
+    </div>
+  </div>
+  <div style="flex:1;overflow:hidden;display:flex;align-items:stretch;">
+    <iframe id="certViewFrame" src="" style="width:100%;height:100%;border:none;background:#fff;"></iframe>
+  </div>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <p class="lbl rev">Recognition</p>
+    <h2 class="st rev d1">Key <em>Wins.</em></h2>
+    <div class="achg">
+      <div class="ach rev d2"><span class="an">01</span>
+        <div><h3 class="ah">Google Cloud Platform – Diamond League</h3>
+        <p class="adesc">Ranked among top performers in GCP Skill Boost, completing 30+ hands-on cloud labs across core services and infrastructure challenges.</p></div>
+      </div>
+      <div class="ach rev d3"><span class="an">02</span>
+        <div><h3 class="ah">AWS Student Community Day – Participant</h3>
+        <p class="adesc">Attended cloud-focused technical sessions and workshops on AWS services, architecture, and serverless infrastructure at the 2025 event.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="container">
+    <p class="lbl rev">Documents</p>
+    <h2 class="st rev d1">My <em>Resume.</em></h2>
+
+    <div class="resume-showcase rev d2">
+
+      <div class="resume-tag-row">
+        <span class="resume-tag">B.Tech CSE</span>
+        <span class="resume-tag">Cloud Computing</span>
+        <span class="resume-tag">LPU 2023–2027</span>
+        <span class="resume-tag">CGPA 7.64</span>
+      </div>
+
+      <!-- Big preview card — replace RESUME_FILE_ID with your Google Drive file ID -->
+      <div class="resume-preview-card" onclick="openResumeViewer()" title="Click to view full resume">
+        <iframe src="shruti_cv.pdf" id="resumePreviewFrame" scrolling="no" title="Resume preview"></iframe>
+        <div class="resume-preview-overlay">
+          <div class="resume-overlay-inner">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <p>Click to view full resume</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-actions-row">
+        <button class="resume-btn-view" onclick="openResumeViewer()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View Full Resume
+        </button>
+        <!-- replace RESUME_FILE_ID with your actual Google Drive file ID -->
+        <a class="resume-btn-dl" href="shruti_cv.pdf" download="Shruti_Chakraborty_Resume.pdf">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+      </div>
+
+
+    </div><!-- end resume-showcase -->
+  </div>
+</section>
+
+<!-- RESUME FULLSCREEN MODAL -->
+<div id="resumeModal" style="display:none;position:fixed;inset:0;z-index:9991;background:rgba(10,6,18,.97);flex-direction:column;">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.5rem;border-bottom:1px solid #2e1a52;background:#160d2a;flex-shrink:0;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#c084fc;">// Shruti Chakraborty — Resume</span>
+    <div style="display:flex;gap:.8rem;align-items:center;">
+      <a href="shruti_cv (1).pdf" download="Shruti_Chakraborty_Resume.pdf"
+         style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;text-decoration:none;border:1px solid rgba(167,139,250,.3);padding:.32rem .75rem;display:inline-flex;align-items:center;gap:.35rem;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a>
+      <button onclick="closeResumeViewer()" style="font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#9575b8;background:none;border:1px solid #2e1a52;cursor:pointer;padding:.32rem .65rem;">✕ Close</button>
+    </div>
+  </div>
+  <div style="flex:1;overflow:hidden;">
+    <iframe src="shruti_cv.pdf" style="width:100%;height:100%;border:none;background:#fff;"></iframe>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="cog">
+      <div class="rev">
+        <p class="lbl">Contact</p>
+        <h2 class="cobig">Let's<br><em>Connect.</em></h2>
+        <p class="codesc">Open to internships, collaborations, and interesting conversations about tech and cloud. Reach out anytime!</p>
+        <div class="cll">
+          <a href="mailto:shruti.asn@rediffmail.com" class="cl"><div class="clic">✉</div><div><p class="cllbl">Email</p><p class="clval">shruti.asn@rediffmail.com</p></div></a>
+          <a href="tel:+918350068028" class="cl"><div class="clic">☎</div><div><p class="cllbl">Mobile</p><p class="clval">+91 83500 68028</p></div></a>
+          <a href="https://www.linkedin.com/in/shruti923" target="_blank" class="cl"><div class="clic">in</div><div><p class="cllbl">LinkedIn</p><p class="clval">linkedin.com/in/shruti923</p></div></a>
+          <a href="https://github.com/shruti2056" target="_blank" class="cl"><div class="clic" style="font-size:.58rem;">GH</div><div><p class="cllbl">GitHub</p><p class="clval">github.com/shruti2056</p></div></a>
+        </div>
+      </div>
+      <div class="rev d2">
+        <p class="lbl" style="margin-bottom:1.2rem;">Send a Message</p>
+        <div class="form" id="contactForm">
+          <div class="fg"><label for="fname">Your Name</label><input id="fname" type="text" placeholder="e.g. Rahul Sharma"/></div>
+          <div class="fg"><label for="femail">Email Address</label><input id="femail" type="email" placeholder="you@example.com"/></div>
+          <div class="fg"><label for="fmsg">Message</label><textarea id="fmsg" placeholder="Tell me what's on your mind..."></textarea></div>
+          <p id="formFeedback" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--green);display:none;margin-top:.2rem;"></p>
+          <button id="sendBtn" class="btn btn-c" style="width:fit-content;">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="fi">
+      <p class="fc2">© 2025 Shruti Chakraborty &nbsp;·&nbsp; B.Tech CSE, LPU</p>
+      <div class="fl">
+        <a href="https://www.linkedin.com/in/shruti923" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shruti2056" target="_blank">GitHub</a>
+        <a href="mailto:shruti.asn@rediffmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
